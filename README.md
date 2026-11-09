@@ -1,4 +1,4 @@
-Markdown# Café Aroma - Sistema de Gestión de Carta
+# Café Aroma - Sistema de Gestión de Carta
 
 Aplicación web desarrollada en **Django** para la gestión de la carta de productos de la cafetería de especialidad **Café Aroma**. El proyecto cuenta con un diseño minimalista y elegante en tonos tierra y dorado, cumpliendo con los estándares de integridad de datos, seguridad y operaciones CRUD completas.
 
