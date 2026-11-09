@@ -1,0 +1,6 @@
+Construccion
+- Proyecto y aplicacion django
+- Models y SQLite
+- Migraciones y Django Admin
+- Relacion entre tipos de cafe y preparaciones
+
