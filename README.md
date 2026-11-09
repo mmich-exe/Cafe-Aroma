@@ -34,11 +34,25 @@ Sigue estos pasos en tu terminal (PowerShell o bash) para poner el proyecto en m
    ```powershell
    # Ejemplo en Windows
    venv\Scripts\Activate
-Aplicar las migraciones de la base de datos:PowerShellpython manage.py makemigrations
+Aplicar las migraciones de la base de datos:
+
+PowerShell
+python manage.py makemigrations
 python manage.py migrate
-Crear un superusuario (opcional para el panel de administración):PowerShellpython manage.py createsuperuser
-Ejecutar el servidor de desarrollo:PowerShellpython manage.py runserver
-Acceder a la aplicación:Vista Pública / Carta: http://127.0.0.1:8000/Panel de Administración: http://127.0.0.1:8000/admin/📋 Documentación de Pruebas y VerificaciónRequisito / CriterioEstadoMétodo de VerificaciónMigraciones sin errores✅Ejecución exitosa de python manage.py migrate.Registro asociado a un tipo✅Formulario web con selector dinámico de categoría mediante ForeignKey.CRUD Web Completo✅Operaciones operativas desde la interfaz para listar, ver detalle, editar y eliminar.Persistencia en SQLite✅Almacenamiento local mediante el ORM de Django en db.sqlite3.Seguridad CSRF✅Inclusión de {% csrf_token %} en todas las peticiones POST.Confirmación de Eliminación✅Pantalla de advertencia previa con método POST obligatorio.Contador de Visitas✅Implementación activa mediante request.session reflejada en la interfaz.📁 Estructura del ProyectoPlaintextcafe_aroma/
+Crear un superusuario (opcional para el panel de administración):
+
+PowerShell
+python manage.py createsuperuser
+Ejecutar el servidor de desarrollo:
+
+PowerShell
+python manage.py runserver
+Acceder a la aplicación:
+
+Vista Pública / Carta: http://127.0.0.1:8000/
+
+Panel de Administración: http://127.0.0.1:8000/admin/
+📁 Estructura del ProyectoPlaintextcafe_aroma/
 │
 ├── carta/                    # Aplicación principal
 │   ├── migrations/           # Archivos de migración de la BD
