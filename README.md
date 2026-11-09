@@ -25,16 +25,111 @@ Aplicación web desarrollada en **Django** para la gestión de la carta de produ
 
 ---
 
-## ⚙️ Instrucciones de Instalación y Ejecución
+# Guía de Instalación y Ejecución - Café Aroma
 
-Sigue estos pasos en tu terminal (PowerShell o bash) para poner el proyecto en marcha:
+Este documento contiene el paso a paso detallado para configurar el entorno, aplicar migraciones, crear usuarios administrativos y ejecutar el proyecto **Café Aroma** en un entorno local.
 
-1. **Clonar o abrir la carpeta del proyecto** donde se encuentra el archivo `manage.py`.
-2. **Activar tu entorno virtual** (si aplica):
-   ```powershell
-   # Ejemplo en Windows
-   venv\Scripts\Activate
+---
 
+## 📋 Requisitos Previos
+
+Antes de comenzar, asegúrate de contar con lo siguiente en tu sistema:
+- **Python 3.10** o superior instalado.
+- **pip** (administrador de paquetes de Python).
+- Un editor de código (ej. Visual Studio Code) o consola de comandos (PowerShell / Terminal).
+
+---
+
+## ⚙️ Paso a Paso: Configuración del Proyecto
+
+### 1. Clonar o Ubicar el Proyecto
+Abre la consola de comandos y navega hasta la carpeta raíz del proyecto (donde se encuentra el archivo `manage.py`):
+
+```powershell
+cd ruta/a/tu/proyecto/cafe_aroma
+```
+
+### 2. Crear y Activar un Entorno Virtual *(Recomendado)*
+Para aislar las dependencias del proyecto, crea un entorno virtual:
+
+- **En Windows:**
+  ```powershell
+  python -m venv venv
+  .\venv\Scripts\activate
+  ```
+
+- **En macOS / Linux:**
+  ```bash
+  python3 -m venv venv
+  source venv/bin/activate
+  ```
+
+### 3. Instalar Django
+Asegúrate de tener instalado Django en el entorno activo:
+
+```powershell
+pip install django
+```
+
+---
+
+## 🗄️ Base de Datos y Migraciones
+
+### 4. Generar y Aplicar Migraciones
+Ejecuta las migraciones necesarias para crear la estructura de la base de datos en SQLite (`db.sqlite3`), incluyendo las restricciones de validación y modelos (`Cafe` y `TipoCafe`):
+
+```powershell
+python manage.py makemigrations
+python manage.py migrate
+```
+
+### 5. Crear Superusuario para el Administrador *(Opcional)*
+Para ingresar al panel de administración de Django (`/admin/`) y gestionar los registros directamente:
+
+```powershell
+python manage.py createsuperuser
+```
+*(Ingresa un usuario, correo y contraseña cuando la consola te lo pida).*
+
+---
+
+## 🚀 Ejecución del Servidor
+
+### 6. Iniciar el Servidor de Desarrollo
+Ejecuta el siguiente comando para poner en marcha la aplicación web:
+
+```powershell
+python manage.py runserver
+```
+
+Una vez ejecutado, verás en la consola una confirmación como esta:
+```text
+System check identified no issues (0 silenced).
+November 09, 2026 - 17:57:00
+Django version 5.0, using settings 'cafe_aroma.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+```
+
+---
+
+## 🌐 Accesos Web
+
+- **Carta Pública (CRUD y Filtros):** [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+- **Panel de Administración:** [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/)
+
+---
+
+## 🛠️ Comandos de Verificación Rápida
+
+| Acción | Comando |
+| :--- | :--- |
+| **Comprobar errores en el proyecto** | `python manage.py check` |
+| **Ejecutar pruebas unitarias** | `python manage.py test` |
+| **Detener el servidor web** | Presionar `Ctrl + C` en la terminal |
+
+
+---
 
 # Estructura del Proyecto Café Aroma
 
