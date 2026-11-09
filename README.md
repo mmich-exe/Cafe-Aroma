@@ -34,24 +34,7 @@ Sigue estos pasos en tu terminal (PowerShell o bash) para poner el proyecto en m
    ```powershell
    # Ejemplo en Windows
    venv\Scripts\Activate
-Aplicar las migraciones de la base de datos:
 
-PowerShell
-python manage.py makemigrations
-python manage.py migrate
-Crear un superusuario (opcional para el panel de administración):
-
-PowerShell
-python manage.py createsuperuser
-Ejecutar el servidor de desarrollo:
-
-PowerShell
-python manage.py runserver
-Acceder a la aplicación:
-
-Vista Pública / Carta: http://127.0.0.1:8000/
-
-Panel de Administración: http://127.0.0.1:8000/admin/
 📁 Estructura del ProyectoPlaintextcafe_aroma/
 │
 ├── carta/                    # Aplicación principal
